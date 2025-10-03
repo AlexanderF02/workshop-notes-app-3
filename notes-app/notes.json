@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Första noten",
+    "body": "Hej!",
+    "favorite": false
+  },
+  {
+    "title": "test",
+    "body": "hej",
+    "favorite": false,
+    "id": 1759486865766
+  }
+]
