@@ -53,5 +53,6 @@ export async function deleteNote(id: number) {
 
 export async function getNoteById(id: number) {
   const notes = await readNotes();
-  return notes.find((n) => n.id === id) ?? null;
+  // Jämför som sträng för säkerhets skull!
+  return notes.find((n) => String(n.id) === String(id)) ?? null;
 }

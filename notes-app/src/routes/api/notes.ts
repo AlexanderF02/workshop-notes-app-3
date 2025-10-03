@@ -3,8 +3,10 @@ import * as notes from '../../api/notes';
 export async function GET({ request }: any) {
   const url = new URL(request.url);
   const id = url.searchParams.get('id');
+  console.log('GET /api/notes', { id }); // Lägg till denna rad
   if (id) {
     const note = await notes.getNoteById(Number(id));
+    console.log('Hittad note:', note); // Lägg till denna rad
     if (!note) return new Response('Not found', { status: 404 });
     return Response.json(note);
   }
